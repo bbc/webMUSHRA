@@ -100,6 +100,9 @@ function addPagesToPageManager(_pageManager, _pages) {
       } else if (pageConfig.type == "likert_multi_stimulus") {
         var likertMultiStimulusPage = new LikertMultiStimulusPage(pageManager, pageTemplateRenderer, pageConfig, audioContext, config.bufferSize, audioFileLoader, session, errorHandler, config.language);
         _pageManager.addPage(likertMultiStimulusPage);
+      } else if (pageConfig.type == "bbc_spatial") {
+        var bbcSpatialPage = new BBCSpatialPage(_pageManager, audioContext, config.bufferSize, audioFileLoader, session, pageConfig, mushraValidator, errorHandler, config.language);
+        _pageManager.addPage(bbcSpatialPage);
       } else if (pageConfig.type == "finish") {
         var finishPage = new FinishPage(_pageManager, session, dataSender, pageConfig, config.language);
         _pageManager.addPage(finishPage);

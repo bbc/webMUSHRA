@@ -1,0 +1,22 @@
+# test config mushra page, 2 trials: 1) not randomized, condition names shown 2) 
+
+testname: BBC spatial
+testId: bbcspatial
+bufferSize: 2048
+stopOnErrors: false
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+
+pages:
+
+    - type: bbc_spatial
+      id: trial1
+      name: Trial1
+      content: test description
+      showWaveform: false
+      enableLooping: false
+      reference: configs/resources/audio/mono_ref.wav
+      showConditionName: true
+      stimuli: 
+          C1: configs/resources/audio/mono_c1.wav
