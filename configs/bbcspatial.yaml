@@ -9,14 +9,13 @@ remoteService: service/write.php
 
 
 pages:
-
     - type: bbc_spatial
       id: trial1
       name: Trial1
-      content: test description
+      content: blah blah blah
       showWaveform: false
       enableLooping: false
-      reference: configs/resources/audio/mono_ref.wav
+      reference: configs/resources/decorr/castanets_extent_az15_el-15_diff0_w0h0/bear_decorr_none_point.wav
       showConditionName: true
       stimuli: 
-          C1: configs/resources/audio/mono_c1.wav
+          C1: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase512.wav
