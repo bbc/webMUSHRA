@@ -84,6 +84,45 @@ if ($write_mushra) {
 	fclose($fp);
 }
 
+//bbcspatial
+$write_bbc_spatial = false;
+$bbc_spatialCsvData = array();
+
+$input = array("session_test_id");
+for($i =0; $i < $length; $i++){
+	array_push($input, $session->participant->name[$i]);
+}
+array_push($input, "trial_id", "condition", "response_azimuth", "response_distance", "response_width", "response_elevation_change", "response_time");
+array_push($bbc_spatialCsvData, $input);
+
+foreach ($session->trials as $trial) {
+  if ($trial->type == "bbc_spatial") {
+	  foreach ($trial->responses as $response) {	  	
+	  	$write_bbc_spatial = true;
+		$results = array($session->testId);
+		for($i =0; $i < $length; $i++){
+			array_push($results, $session->participant->response[$i]);
+		}  
+		array_push($results, $trial->id, $response->condition, $response->azimuth, $response->distance, $response->width, $response->elevation_change, $response->time);
+	  	array_push($bbc_spatialCsvData, $results);
+	  }
+  }
+}
+
+if ($write_bbc_spatial) {
+	$filename = $filepathPrefix."bbc_spatial".$filepathPostfix;
+	$isFile = is_file($filename);
+	$fp = fopen($filename, 'a');
+	foreach ($bbc_spatialCsvData as $row) {
+		if ($isFile) {	    	
+			$isFile = false;
+		} else {
+		   fputcsv($fp, $row);
+		}
+	}
+	fclose($fp);
+}
+
 // paired comparison
 
 $write_pc = false;

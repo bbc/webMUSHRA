@@ -101,8 +101,9 @@ function addPagesToPageManager(_pageManager, _pages) {
         var likertMultiStimulusPage = new LikertMultiStimulusPage(pageManager, pageTemplateRenderer, pageConfig, audioContext, config.bufferSize, audioFileLoader, session, errorHandler, config.language);
         _pageManager.addPage(likertMultiStimulusPage);
       } else if (pageConfig.type == "bbc_spatial") {
-        var bbcSpatialPage = new BBCSpatialPage(_pageManager, pageConfig, session, audioContext, config.bufferSize, audioFileLoader, errorHandler, config.language);
-        _pageManager.addPage(bbcSpatialPage);
+        var bsPageManager = new BBCSpatialPageManager();
+        bsPageManager.createPages(_pageManager, pageTemplateRenderer, pageConfig, audioContext, config.bufferSize, audioFileLoader, session, errorHandler, config.language);
+        bsPageManager = null;
       } else if (pageConfig.type == "finish") {
         var finishPage = new FinishPage(_pageManager, session, dataSender, pageConfig, config.language);
         _pageManager.addPage(finishPage);

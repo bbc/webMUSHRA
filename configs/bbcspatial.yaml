@@ -1,6 +1,6 @@
 # test config mushra page, 2 trials: 1) not randomized, condition names shown 2) 
 
-testname: BBC spatial
+testname: Spatial Characteristics Test
 testId: bbcspatial
 bufferSize: 2048
 stopOnErrors: false
@@ -9,13 +9,45 @@ remoteService: service/write.php
 
 
 pages:
+    - type: generic
+      id: intro
+      name: Introduction
+      content: <p>Welcome to my 10% time demo.</p><p>I'm building an interface for rating spatial characteristics.</p>
     - type: bbc_spatial
       id: trial1
-      name: Trial1
-      content: blah blah blah
-      showWaveform: false
-      enableLooping: false
+      name: Castanets (15˚,-15˚)
+      content: Please indicate the location and extent of the condition sound source. Use the left mouse button to control source azimuth and distance relative to the reference. Use the right mouse button to control the source width (dragging up to increase it and down to decrease it).
+      showConditionNames: true
+      showWaveform: true
+      enableLooping: true
       reference: configs/resources/decorr/castanets_extent_az15_el-15_diff0_w0h0/bear_decorr_none_point.wav
-      showConditionName: true
       stimuli: 
-          C1: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase512.wav
+          Rand512: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase512.wav
+          Rand256: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase256.wav
+          Exp8ms: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_exp8ms.wav
+    - type: finish
+      name: Thank you
+      content: Thank you for attending
+      popupcontent: Your results were sent. Goodbye and have a nice day      
+      showResults: false
+      writeResults: true
+      questionnaire:
+          - type: text
+            label: eMail
+            name: email
+          - type: number
+            label: Age
+            name: age
+            min: 0
+            max: 100
+            default: 30
+          - type: likert
+            name: gender
+            label: Gender
+            response:
+             - value: female
+               label: Female
+             - value: male
+               label: Male
+             - value: other
+               label: Other
