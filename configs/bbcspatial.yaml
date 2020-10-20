@@ -12,22 +12,26 @@ pages:
     - type: generic
       id: intro
       name: Introduction
-      content: <p>Welcome to my 10% time demo.</p><p>I'm building an interface for rating spatial characteristics.</p>
+      content: <p>Welcome to my spatial characteristics test.</p><p>I've built an interface for rating spatial characteristics.</p>
     - type: bbc_spatial
       id: trial1
       name: Castanets (15˚,-15˚)
-      content: Please indicate the location and extent of the condition sound source. Use the left mouse button to control source azimuth and distance relative to the reference. Use the right mouse button to control the source width (dragging up to increase it and down to decrease it).
-      showConditionNames: true
+      content: Please compare the test condition to the reference and indicate the perceived spatial characteristics of the test condition.<br/>Use the scale on the left-hand-side to indicate the height relative to the reference.<br/>Use the radar display on the right-hand-side to indicate the azimuth direction, distance, and width of test condition.
+      showConditionNames: false
       showWaveform: true
-      enableLooping: true
+      enableLooping: false
+      referenceParams:
+        azimuth: 15
+        elevation: -15
       reference: configs/resources/decorr/castanets_extent_az15_el-15_diff0_w0h0/bear_decorr_none_point.wav
       stimuli: 
           Rand512: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase512.wav
           Rand256: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase256.wav
           Exp8ms: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_exp8ms.wav
+      mustRate: true
     - type: finish
       name: Thank you
-      content: Thank you for attending
+      content: Thank you for your time and effort.
       popupcontent: Your results were sent. Goodbye and have a nice day      
       showResults: false
       writeResults: true
