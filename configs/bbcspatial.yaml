@@ -28,6 +28,20 @@ pages:
           Rand512: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase512.wav
           Rand256: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase256.wav
           Exp8ms: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_exp8ms.wav
+      mustRate: true
+    - type: likert_comparison
+      id: likert_1
+      name: Castanets (15˚,-15˚)
+      content: Please compare the test condition to the reference and indicate the timbral quality of the test condition with respect to the reference.<br/>Timbral quality is the degree of similarity or difference in the character of the test condition compared to the reference, for all characteristics that are not related to spatial characteristics, pitch, or loudness.<br/>If the timbre of the test condition is very close to that of the reference, it should be marked as Very Good.
+      showConditionNames: false
+      showWaveform: true
+      enableLooping: false
+      reference: configs/resources/decorr/castanets_extent_az15_el-15_diff0_w0h0/bear_decorr_none_point.wav
+      stimuli: 
+          Rand512: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase512.wav
+          Rand256: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase256.wav
+          Exp8ms: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_exp8ms.wav
+      mustPlayback: true
       response:
         - value: very bad
           label: Very Bad
@@ -59,7 +73,7 @@ pages:
       name: Thank you
       content: Thank you for your time and effort.
       popupcontent: Your results were sent. Goodbye and have a nice day      
-      showResults: false
+      showResults: true
       writeResults: true
       questionnaire:
           - type: text

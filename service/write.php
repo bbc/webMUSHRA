@@ -92,7 +92,7 @@ $input = array("session_test_id");
 for($i =0; $i < $length; $i++){
 	array_push($input, $session->participant->name[$i]);
 }
-array_push($input, "trial_id", "condition", "response_azimuth", "response_distance", "response_width", "response_height", "response_timbral_quality", "response_time");
+array_push($input, "trial_id", "condition", "response_azimuth", "response_distance", "response_width", "response_height", "response_time");
 array_push($bbc_spatialCsvData, $input);
 
 foreach ($session->trials as $trial) {
@@ -103,7 +103,7 @@ foreach ($session->trials as $trial) {
 		for($i =0; $i < $length; $i++){
 			array_push($results, $session->participant->response[$i]);
 		}  
-		array_push($results, $trial->id, $response->condition, $response->azimuth, $response->distance, $response->width, $response->height, $response->timbral_quality, $response->time);
+		array_push($results, $trial->id, $response->condition, $response->azimuth, $response->distance, $response->width, $response->height, $response->time);
 	  	array_push($bbc_spatialCsvData, $results);
 	  }
   }
@@ -302,6 +302,48 @@ if($write_lss){
 	$isFile = is_file($filename); 
 	$fp = fopen($filename, 'a');
 	foreach($lssCSVdata as $row){
+		if ($isFile){
+			$isFile = false; 
+		} else {
+			fputcsv($fp,$row);
+		}
+	}
+	fclose($fp);
+}
+
+// likert comparison
+$write_lc = false;
+$lcCSVdata = array();
+
+$input = array("session_test_id");
+for($i =0; $i < $length; $i++){
+	array_push($input, $session->participant->name[$i]);
+}
+array_push($input,  "trial_id", "response", "condition", "rating_time");
+array_push($lcCSVdata, $input);
+
+foreach($session->trials as $trial) {
+	
+	if($trial->type == "likert_comparison") {
+		foreach ($trial->responses as $response) {
+			$write_lc = true; 
+			
+				$results = array($session->testId);
+			for($i =0; $i < $length; $i++){
+				array_push($results, $session->participant->response[$i]);
+			}  
+			array_push($results,  $trial->id, " $response->stimulusRating ", $response->stimulus, $response->time);
+		  
+		  	array_push($lcCSVdata, $results);
+		}
+	}
+}
+
+if($write_lc){
+	$filename = $filepathPrefix."likert_comparison".$filepathPostfix;
+	$isFile = is_file($filename); 
+	$fp = fopen($filename, 'a');
+	foreach($lcCSVdata as $row){
 		if ($isFile){
 			$isFile = false; 
 		} else {
