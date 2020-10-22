@@ -9,30 +9,30 @@ remoteService: service/write.php
 
 
 pages:
-    # - type: generic
-    #   id: intro
-    #   name: Introduction
-    #   content: <p>Welcome to my spatial characteristics test.</p><p>I've built an interface for rating spatial characteristics.</p>
-    # - type: bbc_spatial
-    #   id: trial1
-    #   name: Castanets (15˚,-15˚)
-    #   content: Please compare the test condition to the reference and indicate the perceived spatial characteristics of the test condition.<br/>Use the scale on the left-hand-side to indicate the height relative to the reference.<br/>Use the radar display on the right-hand-side to indicate the azimuth direction, distance, and width of test condition.
-    #   showConditionNames: false
-    #   showWaveform: true
-    #   enableLooping: false
-    #   referenceParams:
-    #     azimuth: 15
-    #     elevation: -15
-    #   reference: configs/resources/decorr/castanets_extent_az15_el-15_diff0_w0h0/bear_decorr_none_point.wav
-    #   stimuli: 
-    #       Rand512: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase512.wav
-    #       Rand256: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase256.wav
-    #       Exp8ms: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_exp8ms.wav
-    #   mustRate: true
+    - type: generic
+      id: intro
+      name: Introduction
+      content: <p>Welcome to my spatial characteristics test.</p><p>I've built an interface for rating spatial characteristics.</p>
+    - type: bbc_spatial
+      id: trial1
+      name: Castanets (15˚,-15˚)
+      content: Please compare the test condition to the reference and indicate the perceived spatial characteristics of the test condition.<br/>Use the scale on the left-hand-side to indicate the height relative to the reference.<br/>Use the radar display on the right-hand-side to indicate the azimuth direction, distance, and width of test condition.
+      showConditionNames: false
+      showWaveform: true
+      enableLooping: false
+      referenceParams:
+        azimuth: 15
+        elevation: -15
+      reference: configs/resources/decorr/castanets_extent_az15_el-15_diff0_w0h0/bear_decorr_none_point.wav
+      stimuli: 
+          Rand512: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase512.wav
+          Rand256: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase256.wav
+          Exp8ms: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_exp8ms.wav
+      mustRate: true
     - type: likert_comparison
       id: likert_1
       name: Castanets (15˚,-15˚)
-      content: <b>Please compare the test condition to the reference and indicate the degree of colouration on the scale.</b><br/>Colouration is the difference in the character of the test condition compared to the reference, excluding spatial characteristics and loudness. Colouration includes changes in timbre and temporal characteristics.<br/>If these characteristics are unchanged, there is no colouration. If they are changed a lot, there is a lot of colouration. 
+      content: <b>Please compare the test condition to the reference and indicate the amount of colouration on the scale.</b><br/>Colouration is the difference in the character of the test condition compared to the reference, excluding spatial characteristics and loudness. Colouration includes changes in timbre and temporal characteristics.<br/>If these characteristics are unchanged, there is no colouration. If they are changed a lot, there is a lot of colouration. 
       showConditionNames: false
       showWaveform: true
       enableLooping: false
@@ -62,32 +62,7 @@ pages:
           label: No colouration
           img: configs/resources/images/star_off.png
           imgSelected: configs/resources/images/star_on.png
-          imgHigherResponseSelected: configs/resources/images/star_on.png 
-        # - value: very bad
-        #   label: Very Bad
-        #   img: configs/resources/images/star_off.png
-        #   imgSelected: configs/resources/images/star_on.png
-        #   imgHigherResponseSelected: configs/resources/images/star_on.png
-        # - value: bad
-        #   label: Bad
-        #   img: configs/resources/images/star_off.png
-        #   imgSelected: configs/resources/images/star_on.png
-        #   imgHigherResponseSelected: configs/resources/images/star_on.png
-        # - value: fair
-        #   label: Fair
-        #   img: configs/resources/images/star_off.png
-        #   imgSelected: configs/resources/images/star_on.png
-        #   imgHigherResponseSelected: configs/resources/images/star_on.png
-        # - value: good
-        #   label: Good
-        #   img: configs/resources/images/star_off.png
-        #   imgSelected: configs/resources/images/star_on.png
-        #   imgHigherResponseSelected: configs/resources/images/star_on.png 
-        # - value: very good
-        #   label: Very Good
-        #   img: configs/resources/images/star_off.png
-        #   imgSelected: configs/resources/images/star_on.png
-        #   imgHigherResponseSelected: configs/resources/images/star_on.png 
+          imgHigherResponseSelected: configs/resources/images/star_on.png
       mustRate: true
     - type: finish
       name: Thank you
