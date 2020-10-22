@@ -28,6 +28,32 @@ pages:
           Rand512: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase512.wav
           Rand256: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase256.wav
           Exp8ms: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_exp8ms.wav
+      response:
+        - value: very bad
+          label: Very Bad
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: bad
+          label: Bad
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: fair
+          label: Fair
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: good
+          label: Good
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png 
+        - value: very good
+          label: Very Good
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png 
       mustRate: true
     - type: finish
       name: Thank you

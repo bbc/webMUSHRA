@@ -92,7 +92,7 @@ $input = array("session_test_id");
 for($i =0; $i < $length; $i++){
 	array_push($input, $session->participant->name[$i]);
 }
-array_push($input, "trial_id", "condition", "response_azimuth", "response_distance", "response_width", "response_height", "response_time");
+array_push($input, "trial_id", "condition", "response_azimuth", "response_distance", "response_width", "response_height", "response_timbral_quality", "response_time");
 array_push($bbc_spatialCsvData, $input);
 
 foreach ($session->trials as $trial) {
@@ -103,7 +103,7 @@ foreach ($session->trials as $trial) {
 		for($i =0; $i < $length; $i++){
 			array_push($results, $session->participant->response[$i]);
 		}  
-		array_push($results, $trial->id, $response->condition, $response->azimuth, $response->distance, $response->width, $response->height, $response->time);
+		array_push($results, $trial->id, $response->condition, $response->azimuth, $response->distance, $response->width, $response->height, $response->timbral_quality, $response->time);
 	  	array_push($bbc_spatialCsvData, $results);
 	  }
   }
