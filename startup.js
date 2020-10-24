@@ -83,6 +83,15 @@ function addPagesToPageManager(_pageManager, _pages) {
       } else if (pageConfig.type == "mushra") {
         var mushraPage = new MushraPage(_pageManager, audioContext, config.bufferSize, audioFileLoader, session, pageConfig, mushraValidator, errorHandler, config.language);
         _pageManager.addPage(mushraPage);
+      } else if (pageConfig.type == "multi_stimulus_familiarisation") {
+        var msFamilPage = new MultipleStimulusFamiliarisationPage(_pageManager, pageTemplateRenderer, audioContext, config.bufferSize, audioFileLoader, session, pageConfig, mushraValidator, errorHandler, config.language);
+        _pageManager.addPage(msFamilPage);
+      } else if (pageConfig.type == "multi_stimulus_likert_familiarisation") {
+        var msLikertFamilPage = new MultipleStimulusLikertFamiliarisationPage(_pageManager, pageTemplateRenderer, audioContext, config.bufferSize, audioFileLoader, session, pageConfig, mushraValidator, errorHandler, config.language);
+        _pageManager.addPage(msLikertFamilPage);
+      } else if (pageConfig.type == "multi_stimulus_bbc_spatial_familiarisation") {
+        var msBBCSpatialFamilPage = new MultipleStimulusBBCSpatialFamiliarisationPage(_pageManager, pageTemplateRenderer, audioContext, config.bufferSize, audioFileLoader, session, pageConfig, mushraValidator, errorHandler, config.language);
+        _pageManager.addPage(msBBCSpatialFamilPage);
       } else if ( pageConfig.type == "spatial"){
         _pageManager.addPage(new SpatialPage(_pageManager, pageConfig, session, audioContext, config.bufferSize, audioFileLoader, errorHandler, config.language));
       } else if (pageConfig.type == "paired_comparison") {

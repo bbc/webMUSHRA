@@ -12,27 +12,11 @@ pages:
     - type: generic
       id: intro
       name: Introduction
-      content: <p>Welcome to my spatial characteristics test.</p><p>I've built an interface for rating spatial characteristics.</p>
-    - type: bbc_spatial
-      id: trial1
-      name: Castanets (15˚,-15˚)
-      content: Please compare the test condition to the reference and indicate the perceived spatial characteristics of the test condition.<br/>Use the scale on the left-hand-side to indicate the height relative to the reference.<br/>Use the radar display on the right-hand-side to indicate the azimuth direction, distance, and width of test condition.
-      showConditionNames: false
-      showWaveform: true
-      enableLooping: false
-      referenceParams:
-        azimuth: 15
-        elevation: -15
-      reference: configs/resources/decorr/castanets_extent_az15_el-15_diff0_w0h0/bear_decorr_none_point.wav
-      stimuli: 
-          Rand512: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase512.wav
-          Rand256: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase256.wav
-          Exp8ms: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_exp8ms.wav
-      mustRate: true
-    - type: likert_comparison
-      id: likert_1
-      name: Castanets (15˚,-15˚)
-      content: <b>Please compare the test condition to the reference and indicate the amount of colouration on the scale.</b><br/>Colouration is the difference in the character of the test condition compared to the reference, excluding spatial characteristics and loudness. Colouration includes changes in timbre and temporal characteristics.<br/>If these characteristics are unchanged, there is no colouration. If they are changed a lot, there is a lot of colouration. 
+      content: <p>Welcome to the experiment.</p><p>There are two parts to the experiment. The spatial characteristics and the colouration.</p>
+    - type: multi_stimulus_likert_familiarisation
+      id: timbre_familiarisation1
+      name: Familiarisation 1
+      content: Learn how it sounds
       showConditionNames: false
       showWaveform: true
       enableLooping: false
@@ -41,7 +25,6 @@ pages:
           Rand512: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase512.wav
           Rand256: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase256.wav
           Exp8ms: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_exp8ms.wav
-      mustPlayback: true
       response:
         - value: a lot
           label: A lot of colouration
@@ -64,6 +47,85 @@ pages:
           imgSelected: configs/resources/images/star_on.png
           imgHigherResponseSelected: configs/resources/images/star_on.png
       mustRate: true
+    - type: multi_stimulus_bbc_spatial_familiarisation
+      id: timbre_familiarisation1
+      name: Familiarisation 1
+      content: Learn how it sounds
+      showConditionNames: false
+      showWaveform: true
+      enableLooping: false
+      reference: configs/resources/decorr/castanets_extent_az15_el-15_diff0_w0h0/bear_decorr_none_point.wav
+      stimuli: 
+          Rand512: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase512.wav
+          Rand256: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase256.wav
+          Exp8ms: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_exp8ms.wav
+      referenceParams:
+        azimuth: 15
+        elevation: -15
+      mustRate: true
+    -
+      # - random
+      - 
+        - type: generic
+          id: spatial_intro
+          name: Spatial Evaluation
+          content: This section is about the spatial characteristics of the sound.
+        - type: bbc_spatial
+          id: trial1
+          name: Castanets (15˚,-15˚)
+          content: Please compare the test condition to the reference and indicate the perceived spatial characteristics of the test condition.<br/>Use the scale on the left-hand-side to indicate the height relative to the reference.<br/>Use the radar display on the right-hand-side to indicate the azimuth direction, distance, and width of test condition.
+          showConditionNames: false
+          showWaveform: true
+          enableLooping: false
+          referenceParams:
+            azimuth: 15
+            elevation: -15
+          reference: configs/resources/decorr/castanets_extent_az15_el-15_diff0_w0h0/bear_decorr_none_point.wav
+          stimuli: 
+              Rand512: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase512.wav
+              Rand256: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase256.wav
+              Exp8ms: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_exp8ms.wav
+          mustRate: true
+      -
+        - type: generic
+          id: timbral_intro
+          name: Timbral Evaluation
+          content: This section is about the timbral characteristics of the sound.
+        - type: likert_comparison
+          id: likert_1
+          name: Castanets (15˚,-15˚)
+          content: <b>Please compare the test condition to the reference and indicate the amount of colouration on the scale.</b><br/>Colouration is the difference in the character of the test condition compared to the reference, excluding spatial characteristics and loudness. Colouration includes changes in timbre and temporal characteristics.<br/>If these characteristics are unchanged, there is no colouration. If they are changed a lot, there is a lot of colouration. 
+          showConditionNames: false
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/decorr/castanets_extent_az15_el-15_diff0_w0h0/bear_decorr_none_point.wav
+          stimuli: 
+              Rand512: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase512.wav
+              Rand256: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_randphase256.wav
+              Exp8ms: configs/resources/decorr/castanets_extent_az15_el-15_diff1_w30h15/bear_decorr_exp8ms.wav
+          mustPlayback: true
+          response:
+            - value: a lot
+              label: A lot of colouration
+              img: configs/resources/images/star_off.png
+              imgSelected: configs/resources/images/star_on.png
+              imgHigherResponseSelected: configs/resources/images/star_on.png
+            - value: moderate
+              label: Moderate colouration
+              img: configs/resources/images/star_off.png
+              imgSelected: configs/resources/images/star_on.png
+              imgHigherResponseSelected: configs/resources/images/star_on.png
+            - value: a little
+              label: A little colouration
+              img: configs/resources/images/star_off.png
+              imgSelected: configs/resources/images/star_on.png
+              imgHigherResponseSelected: configs/resources/images/star_on.png
+            - value: none
+              label: No colouration
+              img: configs/resources/images/star_off.png
+              imgSelected: configs/resources/images/star_on.png
+              imgHigherResponseSelected: configs/resources/images/star_on.png
+          mustRate: true
     - type: finish
       name: Thank you
       content: Thank you for your time and effort.
