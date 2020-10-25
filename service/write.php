@@ -17,6 +17,12 @@ function sanitize($string = '', $is_filename = FALSE)
 	return strtolower(preg_replace('/--+/u', '-', $string));
 }
 
+function console_log($data)
+{
+	echo '<script>';
+	echo 'console.log(' . json_encode($data) . ')';
+	echo '</script>';
+}
 
 $sessionParam = null;
 if (get_magic_quotes_gpc()) {
@@ -26,46 +32,74 @@ if (get_magic_quotes_gpc()) {
 }
 $session = json_decode($sessionParam);
 
-
 $filepathPrefix = "../results/" . sanitize($string = $session->testId, $is_filename = FALSE) . "/";
 $filepathPostfix = ".csv";
+
+$participantID = uniqid();
 
 if (!is_dir($filepathPrefix)) {
 	mkdir($filepathPrefix);
 }
-$length = count($session->participant->name);
+$questionnaireLength = count($session->participant->name);
+
+// store participant details in separate table
+$participantCsvData = array();
+// headings from participant questionnaire and consent data
+$input = array("session_test_id", "participant_id");
+for ($i = 0; $i < $questionnaireLength; $i++) {
+	array_push($input, $session->participant->name[$i]);
+}
+foreach ($session->participant->consent as $decl => $resp) {
+	console_log($decl);
+	array_push($input, $decl);
+}
+array_push($participantCsvData, $input);
+// push participant data
+$partData = array($session->testId, $participantID);
+for ($i = 0; $i < $questionnaireLength; $i++) {
+	array_push($partData, $session->participant->response[$i]);
+}
+foreach ($session->participant->consent as $decl => $resp) {
+	array_push($partData, $resp);
+}
+array_push($participantCsvData, $partData);
+// write it
+$filename = $filepathPrefix . "participants" . $filepathPostfix;
+$isFile = is_file($filename);
+$fp = fopen($filename, 'a');
+foreach ($participantCsvData as $row) {
+	if ($isFile) {
+		$isFile = false;
+	} else {
+		fputcsv($fp, $row);
+	}
+}
+fclose($fp);
+
 // mushra
 $write_mushra = false;
 $mushraCsvData = array();
 
-
 $input = array("session_test_id");
-for ($i = 0; $i < $length; $i++) {
+for ($i = 0; $i < $questionnaireLength; $i++) {
 	array_push($input, $session->participant->name[$i]);
 }
 array_push($input, "trial_id", "rating_stimulus", "rating_score", "rating_time", "rating_comment");
 array_push($mushraCsvData, $input);
-
-
 
 foreach ($session->trials as $trial) {
 	if ($trial->type == "mushra") {
 		$write_mushra = true;
 
 		foreach ($trial->responses as $response) {
-
-
 			$results = array($session->testId);
-			for ($i = 0; $i < $length; $i++) {
+			for ($i = 0; $i < $questionnaireLength; $i++) {
 				array_push($results, $session->participant->response[$i]);
 			}
 			array_push($results, $trial->id, $response->stimulus, $response->score, $response->time, $response->comment);
 
 			array_push($mushraCsvData, $results);
 		}
-		/*array_push($mushraCsvData, array($session->testId, $session->participant->email, $session->participant->age, $session->participant->gender, $trial->id, $response->stimulus, $response->score, $response->time, $response->comment));
-		 * 
-		 */
 	}
 }
 
@@ -88,7 +122,7 @@ $write_bbc_spatial = false;
 $bbc_spatialCsvData = array();
 
 $input = array("session_test_id");
-for ($i = 0; $i < $length; $i++) {
+for ($i = 0; $i < $questionnaireLength; $i++) {
 	array_push($input, $session->participant->name[$i]);
 }
 array_push($input, "trial_id", "condition", "response_azimuth", "response_distance", "response_width", "response_height", "response_time");
@@ -99,7 +133,7 @@ foreach ($session->trials as $trial) {
 		foreach ($trial->responses as $response) {
 			$write_bbc_spatial = true;
 			$results = array($session->testId);
-			for ($i = 0; $i < $length; $i++) {
+			for ($i = 0; $i < $questionnaireLength; $i++) {
 				array_push($results, $session->participant->response[$i]);
 			}
 			array_push($results, $trial->id, $response->condition, $response->azimuth, $response->distance, $response->width, $response->height, $response->time);
@@ -129,7 +163,7 @@ $pcCsvData = array();
 // array_push($pcCsvData, array("session_test_id", "participant_email", "participant_age", "participant_gender", "trial_id", "choice_reference", "choice_non_reference", "choice_answer", "choice_time", "choice_comment"));
 
 $input = array("session_test_id");
-for ($i = 0; $i < $length; $i++) {
+for ($i = 0; $i < $questionnaireLength; $i++) {
 	array_push($input, $session->participant->name[$i]);
 }
 array_push($input, "trial_id", "choice_reference", "choice_non_reference", "choice_answer", "choice_time", "choice_comment");
@@ -144,7 +178,7 @@ foreach ($session->trials as $trial) {
 
 
 			$results = array($session->testId);
-			for ($i = 0; $i < $length; $i++) {
+			for ($i = 0; $i < $questionnaireLength; $i++) {
 				array_push($results, $session->participant->response[$i]);
 			}
 			array_push($results, $trial->id, $response->reference, $response->nonReference, $response->answer, $response->time, $response->comment);
@@ -177,7 +211,7 @@ $write_bs1116 = false;
 $bs1116CsvData = array();
 
 $input = array("session_test_id");
-for ($i = 0; $i < $length; $i++) {
+for ($i = 0; $i < $questionnaireLength; $i++) {
 	array_push($input, $session->participant->name[$i]);
 }
 array_push($input,  "trial_id", "rating_reference", "rating_non_reference", "rating_reference_score", "rating_non_reference_score", "rating_time", "choice_comment");
@@ -190,7 +224,7 @@ foreach ($session->trials as $trial) {
 			$write_bs1116 = true;
 
 			$results = array($session->testId);
-			for ($i = 0; $i < $length; $i++) {
+			for ($i = 0; $i < $questionnaireLength; $i++) {
 				array_push($results, $session->participant->response[$i]);
 			}
 			array_push($results, $trial->id, $response->reference, $response->nonReference, $response->referenceScore, $response->nonReferenceScore, $response->time, $response->comment);
@@ -223,7 +257,7 @@ $lmsCSVdata = array();
 // array_push($lmsCSVdata, array("session_test_id", "participant_email", "participant_age", "participant_gender", "trial_id", "stimuli_rating", "stimuli", "rating_time"));
 
 $input = array("session_test_id");
-for ($i = 0; $i < $length; $i++) {
+for ($i = 0; $i < $questionnaireLength; $i++) {
 	array_push($input, $session->participant->name[$i]);
 }
 array_push($input,  "trial_id", "stimuli_rating", "stimuli", "rating_time");
@@ -236,7 +270,7 @@ foreach ($session->trials as $trial) {
 			$write_lms = true;
 
 			$results = array($session->testId);
-			for ($i = 0; $i < $length; $i++) {
+			for ($i = 0; $i < $questionnaireLength; $i++) {
 				array_push($results, $session->participant->response[$i]);
 			}
 			array_push($results,  $trial->id, " $response->stimulusRating ", $response->stimulus, $response->time);
@@ -271,7 +305,7 @@ $lssCSVdata = array();
 // array_push($lssCSVdata, array("session_test_id", "participant_email", "participant_age", "participant_gender", "trial_id", "stimuli_rating", "stimuli", "rating_time"));
 
 $input = array("session_test_id");
-for ($i = 0; $i < $length; $i++) {
+for ($i = 0; $i < $questionnaireLength; $i++) {
 	array_push($input, $session->participant->name[$i]);
 }
 array_push($input,  "trial_id", "stimuli_rating", "stimuli", "rating_time");
@@ -284,7 +318,7 @@ foreach ($session->trials as $trial) {
 			$write_lss = true;
 
 			$results = array($session->testId);
-			for ($i = 0; $i < $length; $i++) {
+			for ($i = 0; $i < $questionnaireLength; $i++) {
 				array_push($results, $session->participant->response[$i]);
 			}
 			array_push($results,  $trial->id, " $response->stimulusRating ", $response->stimulus, $response->time);
@@ -314,10 +348,7 @@ if ($write_lss) {
 $write_lc = false;
 $lcCSVdata = array();
 
-$input = array("session_test_id");
-for ($i = 0; $i < $length; $i++) {
-	array_push($input, $session->participant->name[$i]);
-}
+$input = array("session_test_id", "participant_id");
 array_push($input,  "trial_id", "response", "condition", "rating_time");
 array_push($lcCSVdata, $input);
 
@@ -327,12 +358,8 @@ foreach ($session->trials as $trial) {
 		foreach ($trial->responses as $response) {
 			$write_lc = true;
 
-			$results = array($session->testId);
-			for ($i = 0; $i < $length; $i++) {
-				array_push($results, $session->participant->response[$i]);
-			}
+			$results = array($session->testId, $participantID);
 			array_push($results,  $trial->id, " $response->stimulusRating ", $response->stimulus, $response->time);
-
 			array_push($lcCSVdata, $results);
 		}
 	}
@@ -358,7 +385,7 @@ $write_spatial_localization = false;
 $spatial_localizationData = array();
 
 $input = array("session_test_id");
-for ($i = 0; $i < $length; $i++) {
+for ($i = 0; $i < $questionnaireLength; $i++) {
 	array_push($input, $session->participant->name[$i]);
 }
 array_push($input,  "trial_id", "name", "stimulus", "position_x", "position_y", "position_z");
@@ -374,7 +401,7 @@ foreach ($session->trials as $trial) {
 			$write_spatial_localization = true;
 
 			$results = array($session->testId);
-			for ($i = 0; $i < $length; $i++) {
+			for ($i = 0; $i < $questionnaireLength; $i++) {
 				array_push($results, $session->participant->response[$i]);
 			}
 			array_push($results, $trial->id, $response->name, $response->stimulus, $response->position[0], $response->position[1], $response->position[2]);
@@ -405,7 +432,7 @@ $write_spatial_asw = false;
 $spatial_aswData = array();
 
 $input = array("session_test_id");
-for ($i = 0; $i < $length; $i++) {
+for ($i = 0; $i < $questionnaireLength; $i++) {
 	array_push($input, $session->participant->name[$i]);
 }
 
@@ -422,7 +449,7 @@ foreach ($session->trials as $trial) {
 			$write_spatial_asw = true;
 
 			$results = array($session->testId);
-			for ($i = 0; $i < $length; $i++) {
+			for ($i = 0; $i < $questionnaireLength; $i++) {
 				array_push($results, $session->participant->response[$i]);
 			}
 			array_push($results, $trial->id, $response->name, $response->stimulus, $response->position_outerRight[0], $response->position_outerRight[1], $response->position_outerRight[2], $response->position_innerRight[0], $response->position_innerRight[1], $response->position_innerRight[2], $response->position_innerLeft[0], $response->position_innerLeft[1], $response->position_innerLeft[2], $response->position_outerLeft[0], $response->position_outerLeft[1], $response->position_outerLeft[2]);
@@ -453,7 +480,7 @@ $write_spatial_hwd = false;
 $spatial_hwdData = array();
 
 $input = array("session_test_id");
-for ($i = 0; $i < $length; $i++) {
+for ($i = 0; $i < $questionnaireLength; $i++) {
 	array_push($input, $session->participant->name[$i]);
 }
 
@@ -470,7 +497,7 @@ foreach ($session->trials as $trial) {
 			$write_spatial_hwd = true;
 
 			$results = array($session->testId);
-			for ($i = 0; $i < $length; $i++) {
+			for ($i = 0; $i < $questionnaireLength; $i++) {
 				array_push($results, $session->participant->response[$i]);
 			}
 			array_push($results, $trial->id, $response->name, $response->stimulus, $response->position_outerRight[0], $response->position_outerRight[1], $response->position_outerRight[2], $response->position_innerRight[0], $response->position_innerRight[1], $response->position_innerRight[2], $response->position_innerLeft[0], $response->position_innerLeft[1], $response->position_innerLeft[2], $response->position_outerLeft[0], $response->position_outerLeft[1], $response->position_outerLeft[2], $response->height, $response->depth);
@@ -500,7 +527,7 @@ $write_spatial_lev = false;
 $spatial_levData = array();
 
 $input = array("session_test_id");
-for ($i = 0; $i < $length; $i++) {
+for ($i = 0; $i < $questionnaireLength; $i++) {
 	array_push($input, $session->participant->name[$i]);
 }
 
@@ -517,7 +544,7 @@ foreach ($session->trials as $trial) {
 			$write_spatial_lev = true;
 
 			$results = array($session->testId);
-			for ($i = 0; $i < $length; $i++) {
+			for ($i = 0; $i < $questionnaireLength; $i++) {
 				array_push($results, $session->participant->response[$i]);
 			}
 			array_push($results, $trial->id, $response->name, $response->stimulus, $response->position_center[0], $response->position_center[1], $response->position_center[2], $response->position_height[0], $response->position_height[1], $response->position_height[2], $response->position_width1[0], $response->position_width1[1], $response->position_width1[2], $response->position_width2[0], $response->position_width2[1], $response->position_width2[2]);

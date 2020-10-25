@@ -80,6 +80,9 @@ function addPagesToPageManager(_pageManager, _pages) {
       } else if (pageConfig.type == "volume") {
         var volumePage = new VolumePage(_pageManager, audioContext, audioFileLoader, pageConfig, config.bufferSize, errorHandler, config.language);
         _pageManager.addPage(volumePage);
+      } else if (pageConfig.type == "consent_form") {
+        var consentFormPage = new ConsentFormPage(_pageManager, session, pageConfig, pageTemplateRenderer);
+        _pageManager.addPage(consentFormPage);
       } else if (pageConfig.type == "mushra") {
         var mushraPage = new MushraPage(_pageManager, audioContext, config.bufferSize, audioFileLoader, session, pageConfig, mushraValidator, errorHandler, config.language);
         _pageManager.addPage(mushraPage);
