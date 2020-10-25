@@ -17,13 +17,6 @@ function sanitize($string = '', $is_filename = FALSE)
 	return strtolower(preg_replace('/--+/u', '-', $string));
 }
 
-function console_log($data)
-{
-	echo '<script>';
-	echo 'console.log(' . json_encode($data) . ')';
-	echo '</script>';
-}
-
 $sessionParam = null;
 if (get_magic_quotes_gpc()) {
 	$sessionParam = stripslashes($_POST['sessionJSON']);
@@ -49,7 +42,6 @@ foreach ($session->participant->questionnaire as $question => $answer) {
 	array_push($input, $question);
 }
 foreach ($session->participant->consent as $decl => $resp) {
-	console_log($decl);
 	array_push($input, $decl);
 }
 array_push($participantCsvData, $input);
