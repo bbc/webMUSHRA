@@ -7,3 +7,4 @@ Contributors
 * Fabian-Robert Stöter <https://github.com/faroit>
 * Susanne Westphal
 * Maximilian Neumayer
+* Chris Pike <https://github.com/chrispike-bbc>
