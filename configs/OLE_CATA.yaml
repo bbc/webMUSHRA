@@ -93,7 +93,7 @@ pages:
               popUp: definition of no latency
             - value: localisation stable
               label: Localisation stable
-              popUp: definition of phasiness localisation stable
+              popUp: definition of localization stable
         - type: heading
           label: Extra notes
           content: Give any further explanation for your ratings
