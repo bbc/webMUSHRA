@@ -1,0 +1,55 @@
+# Likert multi stimulus page 5 stimuli, 5 responses
+
+
+testname: Overall Listening Experience - Multiple Stimuli Rating
+testId: ole_multi
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+
+
+pages:
+
+    - type: OLE_multi
+      id: ole_multi
+      name: Overall Listening Experience - Multiple Stimuli Rating
+      content: How much do you enjoy listening to the following music items?
+      mustRate: true
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+          C2: configs/resources/audio/mono_c2.wav
+      response:
+        - value: not at all
+          label: Not at all
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: not a lot
+          label: Not a lot
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: neutral
+          label: neutral
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: quite
+          label: Quite
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png   
+        - value: a lot
+          label: A lot
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png          
+
+
+    - type: finish
+      name: Thank you
+      content: Thank you for attending
+      showResults: true
+      writeResults: true

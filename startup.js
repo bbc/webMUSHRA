@@ -123,7 +123,15 @@ function addPagesToPageManager(_pageManager, _pages) {
       } else if (pageConfig.type == "finish") {
         var finishPage = new FinishPage(_pageManager, session, dataSender, pageConfig, config.language);
         _pageManager.addPage(finishPage);
-      } else {
+      } else if (pageConfig.type == "OLE_multi") {
+        var MarusalikertMultiStimulusPage = new OLEMultiStimulusPage(pageManager, pageTemplateRenderer, pageConfig, audioContext, config.bufferSize, audioFileLoader, session, errorHandler, config.language);
+        _pageManager.addPage(MarusalikertMultiStimulusPage);
+      } else if (pageConfig.type == "OLE_CATA") {
+        var MarusalikertSingleStimulusPageManager = new OLECATAPageManager();
+        MarusalikertSingleStimulusPageManager.createPages(_pageManager, pageTemplateRenderer, pageConfig, audioContext, config.bufferSize, audioFileLoader, session, errorHandler, config.language);
+        MarusalikertSingleStimulusPageManager = null;
+      }
+      else {
         errorHandler.sendError("Type not specified.");
       }
     }

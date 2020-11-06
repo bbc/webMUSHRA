@@ -480,3 +480,76 @@ if ($write_spatial_lev) {
 	}
 	fclose($fp);
 }
+
+//OLE_multi
+
+$write_OLE_multi = false;
+$OLE_multiCSVdata = array();
+// array_push($lmsCSVdata, array("session_test_id", "participant_email", "participant_age", "participant_gender", "trial_id", "stimuli_rating", "stimuli", "rating_time"));
+
+$input = array("session_test_id", "participant_id");
+array_push($input,  "trial_id", "stimuli_rating", "stimuli", "rating_time");
+array_push($OLE_multiCSVdata, $input);
+
+
+foreach ($session->trials as $trial) {
+	if ($trial->type == "OLE_multi") {
+		foreach ($trial->responses as $response) {
+			$write_OLE_multi = true;
+			$results = array($session->testId, $participantID);
+			array_push($results,  $trial->id, " $response->stimulusRating ", $response->stimulus, $response->time);
+			array_push($OLE_multiCSVdata, $results);
+		}
+	}
+}
+
+if ($write_OLE_multi) {
+	$filename = $filepathPrefix . "OLE_multi" . $filepathPostfix;
+	$isFile = is_file($filename);
+	$fp = fopen($filename, 'a');
+	foreach ($OLE_multiCSVdata as $row) {
+		if ($isFile) {
+			$isFile = false;
+		} else {
+			fputcsv($fp, $row);
+		}
+	}
+	fclose($fp);
+}
+
+
+//OLE_CATA
+
+$write_OLE_CATA = false;
+$OLE_CATACSVdata = array();
+// array_push($lssCSVdata, array("session_test_id", "participant_email", "participant_age", "participant_gender", "trial_id", "stimuli_rating", "stimuli", "rating_time"));
+
+$input = array("session_test_id", "participant_id");
+array_push($input,  "trial_id", "stimuli_rating", "stimuli", "rating_time");
+array_push($OLE_CATACSVdata, $input);
+
+foreach ($session->trials as $trial) {
+
+	if ($trial->type == "OLE_CATA") {
+		foreach ($trial->responses as $response) {
+			$write_OLE_CATA = true;
+			$results = array($session->testId, $participantID);
+			array_push($results,  $trial->id, " $response->stimulusRating ", $response->stimulus, $response->time);
+			array_push($OLE_CATACSVdata, $results);
+		}
+	}
+}
+
+if ($write_OLE_CATA) {
+	$filename = $filepathPrefix . "OLE_CATA" . $filepathPostfix;
+	$isFile = is_file($filename);
+	$fp = fopen($filename, 'a');
+	foreach ($OLE_CATACSVdata as $row) {
+		if ($isFile) {
+			$isFile = false;
+		} else {
+			fputcsv($fp, $row);
+		}
+	}
+	fclose($fp);
+}

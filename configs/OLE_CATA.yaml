@@ -1,0 +1,142 @@
+# Likert single stimulus page 1 stimuli, 5 responses
+
+
+testname: Overall Listening Experience - Single Stimuli Rating
+testId: ole_cata
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+
+
+pages:
+
+    - type: OLE_CATA
+      id: first_page
+      name: Stimuli 1
+      content: How much do you enjoy listening to the following music item?
+      mustRate: true
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      response:
+        - value: not at all
+          label: Not at all
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: not a lot
+          label: Not a lot
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: neutral
+          label: Neutral
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: quite
+          label: Quite
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png   
+        - value: a lot
+          label: A lot
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png 
+      questionnaire:
+        - type: heading
+          label: Attribute selection
+          content: Please select all attributes which contributes most to your listening experience rating
+        - type: checkboxes
+          label: Spatial   
+          name: spatial
+          response:
+            - value: enveloping
+              label: Enveloping
+              popUp: definition of enveloping
+            - value: sounds easily localized
+              label: Sounds easily localized
+              popUp: definition of sounds easily localized
+            - value: sounds hard to localise
+              label: Sounds hard to localise
+              popUp: definition of sounds hard to localise
+        - type: checkboxes
+          label: Timbral   
+          name: timbral
+          response:
+            - value: strong colouration
+              label: Strong colouration
+              popUp: definition of strong colouration
+            - value: subtle colouration
+              label: Subtle colouration
+              popUp: definition of subtle colouration
+            - value: no colouration
+              label: No colouration
+              popUp: definition of no colouration
+            - value: phasiness comb-filtering
+              label: Phasiness / comb-filtering
+              popUp: definition of phasiness comb-filtering
+        - type: checkboxes
+          label: Head movement   
+          name: head movement
+          response:
+            - value: obvious latency
+              label: Obvious latency
+              popUp: definition of obvious latency
+            - value: subtle latency
+              label: Subtle latency
+              popUp: definition of subtle latency
+            - value: no latency
+              label: No latency
+              popUp: definition of no latency
+            - value: localisation stable
+              label: Localisation stable
+              popUp: definition of phasiness localisation stable
+        - type: heading
+          label: Extra notes
+          content: Give any further explanation for your ratings
+        - type: long_text
+          name: feedback
+          optional: true
+      
+    - type: OLE_CATA
+      id: second_page
+      name: Stimuli 2
+      content: How much do you enjoy listening to the following music item?
+      mustRate: true
+      stimuli:
+          C2: configs/resources/audio/mono_c2.wav
+      response:
+        - value: not at all
+          label: Not at all
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: not a lot
+          label: Not a lot
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: neutral
+          label: Neutral
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: quite
+          label: Quite
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png   
+        - value: a lot
+          label: A lot
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+
+    - type: finish
+      name: Thank you
+      content: Thank you for attending
+      showResults: true
+      writeResults: true
