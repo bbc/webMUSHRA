@@ -46,7 +46,7 @@ pages:
           imgSelected: configs/resources/images/star_on.png
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
-        - type: heading
+        - type: attributeheading
           label: Attribute selection
           content: Please select all attributes which contributes most to your listening experience rating
         - type: checkboxes
@@ -94,11 +94,11 @@ pages:
             - value: localisation stable
               label: Localisation stable
               popUp: definition of localization stable
-        - type: heading
+        - type: notesheading
           label: Extra notes
           content: Give any further explanation for your ratings
         - type: long_text
-          name: feedback
+          name: Extra notes
           optional: true
       
     - type: OLE_CATA
