@@ -91,9 +91,47 @@ pages:
             - value: no latency
               label: No latency
               popUp: definition of no latency
-            - value: localisation stable
-              label: Localisation stable
-              popUp: definition of localization stable
+            - value: localisation stable with head movement
+              label: Localisation stable with head movement
+              popUp: definition of localization stable with head movement
+            - value: localisation unstable with head movement
+              label: Localisation unstable with head movement
+              popUp: definition of localization unstable with head movement
+        - type: checkboxes
+          label: Dynamics  
+          name: dynamics 
+          response:
+            - value: louder
+              label: Louder
+              popUp: definition of louder
+            - value: quieter
+              label: Quieter
+              popUp: definition of quieter
+            - value: reduced dynamic range
+              label: Reduced dynamic range
+              popUp: definition of reduced dynamic range
+            - value: increased dynamic range
+              label: Increased dynamic range
+              popUp: definition of increased dynamic range
+        - type: checkboxes
+          label: General  
+          name: general
+          response:
+            - value: clear
+              label: Clear
+              popUp: definition of clear
+            - value: unclear
+              label: Unclear 
+              popUp: definition of unclear
+            - value: natural
+              label: Natural
+              popUp: definition of natural
+            - value: unnatural
+              label: Unnatural
+              popUp: definition of unnatural
+            - value: immersive
+              label: Immersive
+              popUp: definition of immersive
         - type: notesheading
           label: Extra notes
           content: Give any further explanation for your ratings
