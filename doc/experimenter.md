@@ -136,6 +136,8 @@ A paired comparison page with a single Likert scale for rating the differences b
 * **reference** Filepath to the reference stimulus (WAV file).
 * **stimuli** A map of stimuli representing the test conditions. The key is the name of the condition. The value is the filepath to the stimulus (WAV file). For each stimulus in the map, a separate page is created from the single config, each with a paired comparison to the reference.
 * **response** An array which represents the Likert scale, where each array element represents a 'likert point'. The array elements are maps with the keys 'value' (value shown in results), 'label' (label of the likert point), 'img' (path to an image of the likert point), 'imgSelected' (image shown if likert point is selected), and 'imgHigherResponseSelected' (image shown when a 'higher' likert point is selected).
+* **familiarisation** If set to true, creates a page of type `multi_stimulus_likert_familiarisation` page before the rating pages.
+* **familiarisationConfig** Add or overwrite fields to pass to the familiarisation page config. Fields of this config are passed through, except `type`, `familiarisation` and `familiarisationConfig`.
 
 #### `bbc_spatial` page
 
@@ -152,6 +154,8 @@ A page for rating spatial characteristics of a test condition, with comparison t
 * **stimuli** A map of stimuli representing the test conditions. The key is the name of the condition. The value is the filepath to the stimulus (WAV file). For each stimulus in the map, a separate page is created from the single config, each with a comparison to the reference.
 * **referenceParams** A map of the parameters of the reference. The keys are 'azimuth' and 'elevation' and the values should be integers.
 * **mustRate** If set to true, the participant must give a rating for all parameters before proceeding. 
+* **familiarisation** If set to true, creates a page of type `multi_stimulus_bbc_spatial_familiarisation` page before the rating pages.
+* **familiarisationConfig** Add or overwrite fields to pass to the familiarisation page config. Fields of this config are passed through, except `type`, `familiarisation` and `familiarisationConfig`.
 
 #### `consent_form` page
 
