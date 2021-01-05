@@ -155,6 +155,7 @@ A page for rating spatial characteristics of a test condition, with comparison t
 * **referenceParams** A map of the parameters of the reference. The keys are 'azimuth' and 'elevation' and the values should be integers.
 * **mustRate** If set to true, the participant must give a rating for all parameters before proceeding.
 * **evaluateReference** If set to true, creates a page for evaluating the spatial characteristics of the reference condition. These are then used in the other rating pages (when the reported parameter is not given relative to the position of the reference).
+* **evaluateReferenceConfig** Add or overwrite fields to pass to the reference evaluation page config. Fields of this config are passed through, except `type`, `evaluateReference` and `evaluateReferenceConfig`.
 * **familiarisation** If set to true, creates a page of type `multi_stimulus_bbc_spatial_familiarisation` page before the rating pages.
 * **familiarisationConfig** Add or overwrite fields to pass to the familiarisation page config. Fields of this config are passed through, except `type`, `familiarisation` and `familiarisationConfig`.
 
