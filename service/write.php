@@ -30,6 +30,9 @@ $filepathPostfix = ".csv";
 
 $participantID = uniqid();
 
+$dateTime = new DateTime();
+$dateTimeStr = $dateTime->format('Y-m-d H:i:s');
+
 if (!is_dir($filepathPrefix)) {
 	mkdir($filepathPrefix);
 }
@@ -37,7 +40,7 @@ if (!is_dir($filepathPrefix)) {
 // store participant details in separate table
 $participantCsvData = array();
 // headings from participant questionnaire and consent data
-$input = array("session_test_id", "participant_id");
+$input = array("session_test_id", "participant_id", "time_stamp");
 foreach ($session->participant->questionnaire as $question => $answer) {
 	array_push($input, $question);
 }
@@ -46,7 +49,7 @@ foreach ($session->participant->consent as $decl => $resp) {
 }
 array_push($participantCsvData, $input);
 // push participant data
-$partData = array($session->testId, $participantID);
+$partData = array($session->testId, $participantID, $dateTimeStr);
 foreach ($session->participant->questionnaire as $question => $answer) {
 	array_push($partData, $answer);
 }
