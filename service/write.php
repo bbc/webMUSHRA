@@ -113,7 +113,7 @@ array_push($input, "trial_id", "condition", "response_azimuth", "response_distan
 array_push($bbc_spatialCsvData, $input);
 
 foreach ($session->trials as $trial) {
-	if ($trial->type == "bbc_spatial") {
+	if ($trial->type == "bbc_spatial" || $trial->type == "bbc_spatial_reference") {
 		foreach ($trial->responses as $response) {
 			$write_bbc_spatial = true;
 			$results = array($session->testId, $participantID);
