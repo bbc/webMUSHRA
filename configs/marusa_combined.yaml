@@ -15,13 +15,16 @@ pages:
     - type: generic
       id: intro
       name: Introduction
-      content: <p><b>Welcome to this listening experiment! Thank you for taking part.</b></p><p align="left">We are evaluating the listening experience of the Apple AirPods Spatial Audio feature. More specifically, we are investigating both the overall listening experience as well as its specific characteristics.</p><p align="left">Please read the experimental instructions on the following page and ask any questions you have to the experimenter on Slack or via Email. Please also read the notices about personal data and privacy and how we will use your responses. If you are happy to continue, please fill in the declaration form and click ‘I Agree’ before starting the experiment.</p>
+      content: <p><b>Welcome to this listening experiment! Thank you for taking part.</b></p><p align="left">We are evaluating the listening experience of the Apple AirPods Spatial Audio feature. More specifically, we are investigating both the overall listening experience as well as its specific characteristics.</p><p align="left">Please read the experimental instructions on the following page and ask any questions you have to the experimenter. Please also read the notices on page 3 about personal data and privacy and how we will use your responses.</p>
+    - type: generic
+      id: instructions
+      name: Experimental instructions
+      content: <p align=left>Please ensure that you are in a quiet environment and that you have your AirPods Pro with the spatial audio feature enabled as well as your iOS device with the installed experimental app.</p><p align=left>In this experiment you will listen to various excerpts with your AirPods Pro while using the experimental application on your iOS device. For each excerpt you will be asked to <b>rate your overall listening experience</b> on a simple scale using this web-based interface. In particular, you will be asked <i>“How much do you enjoy listening to the following excerpt(s)”</i> with possible answers ranging from <i>“Not at all”</i> to <i>“Very much”</i>. When making your ratings you should take everything into account that you would normally in a real world scenario (e.g. your taste in music, the audio quality etc.).</p><p align=left>The experiment has two identical parts and each part has two sections. In section 1, you will be asked to rate the overall listening experience of 5 excerpts on a single page. In section 2, you will be asked to rate the listening experience of 10 excerpts and <b>select all the attributes or characteristics</b> of the listening experience that contributed to your rating. After you have selected the relevant attributes, you will also have the ability to <b>provide additional notes</b>, which could include further explanation for your rating or any other attributes that contributed to it. Once you have completed a section, you may click "Next" to move on to the next section. A progress bar at the top of the page will indicate your progress through the experiment.</p><p align=left>Before the actual experiment, you will have the chance to familiarize yourself with the task and the interface. Please adjust the volume on your iOS device to a desired level during the familiarization phase and try to keep it the same throughout the subsequent experiment. After completing the familiarization phase for both section 1 and 2, you will move onto part 1 of the experiment. After completing both sections of part 1, please take a break of at least 30 minutes before moving onto part 2.</p><p align=left>Before the rating task, please listen carefully to the excerpts on your iOS device. These will be labelled "Stimulus 1", "Stimulus 2", "Stimulus 3"... Please ensure that you are rating the correct stimulus by checking that the stimulus name on your iOS device matches the stimulus name on this interface. You may listen to the excerpts as many times as you wish but please make sure to listen to each excerpt from start to finish at least once.</p><p align=left>You may take a break at any time during the experiment. We estimate that the entire experiment will take about 30 (to check!) minutes, though this will vary between individual participants.</p><p align=left>Once you have completed both parts of the experiment, you will be asked to fill out a short questionnaire to collect some information about yourself, which will aid our analysis. Once you have filled this in and clicked "Send Results", the experiment is complete and you can close the browser window. Until this point, we do not store your responses, so if the browser window is closed before this point, we will not receive any data from you and your responses will be lost. Please keep your browser window open until you have completed the experiment.</p>
     - type: consent_form
       id: consent
       name: Experiment Consent Form
       projectName: Apple AirPods Spatial Audio Feature Experiment
-      intro: <p align=left>Please read the experiment instructions below and ask any questions you have to the experimenter on Slack or via Email. Please also read the notices about personal data and privacy and how we will use your responses. If you are happy to continue, please fill in the declaration form and click ‘I Agree’ before starting the experiment.</p>
-      instructions: <p align=left>Please ensure that you are in a quiet environment and that you have your AirPods Pro with the spatial audio feature enabled as well as your iOS device with the installed experimental app.</p><p align=left>In this experiment you will listen to various excerpts of several content types with the Apple AirPods while using the experimental application installed on your iOS device. For each excerpt you will be asked to rate your overall listening experience on a simple scale. In particular, you will be asked “How much do you enjoy listening to the following music item(s)” with possible answers ranging from “not at all” to “very much”. When making your ratings you should take everything into account that you would normally in a real world scenario (e.g. your taste in music, the audio quality etc.). The experiment involves two sections; in section 1 you will be asked to rate the overall listening experience of several excerpts on a single page. In section 2 you will be asked to rate the listening experience of the same excerpts again and also select all the characteristics of the listening experience that contributed to your rating. After you have selected the relevant characteristics, you will also have the ability to provide additional notes, which could include further explanation for your rating or any other characteristics that contributed to it. Each section will start with specific instructions for the tasks in that section and a chance to familiarise yourself with the interface and required response.</p><p align=left>In section 1, you will evaluate 5 excerpts, whereas in section 2 you will evaluate 10 excerpts. Before the evaluation task, you will have the chance to familiarize yourself with the task and the interface. Once familiar with the latter, you will be asked to evaluate each several excerpts as explained earlier.</p><p align=left>During each evaluation task, please listen carefully to the suggested clips on your iOS device. These will be labelled ‘Stimuli 1’, 'Stimuli 2’, 'Stimuli 3', etc.. Please listen to the clips in turn and ensure you are rating the correct stimuli by looking at the stimuli number on this interface. You may listen to the excerpt as many times as you wish but please make sure to listen to the entire clip at least once.</p><p align=left>Once you have completed the evaluation task, you may click ’Next’ to move on to the next evaluation task. A progress bar at the top of the page will indicate your progress through the experiment.</p><p align=left>Please note that you can take a break at any time during the experiment. We estimate that the entire experiment will take about 20 (to check!) minutes, though this will vary between individual participants.</p><p align=left>Once the evaluation tasks of both sections are complete, there will be a short questionnaire to collect some information about yourself, which will aid our analysis. Once you have filled this in and clicked ‘Send Results’, the experiment session is complete and you can close the browser window. Until this point, we do not store your responses, so if the browser window is closed before this point, we will not receive any data from you and your responses will be lost. Please keep your browser window open until you have completed the experiment.</p>
+      intro: <p align=left>Please read the notices about personal data and privacy and how we will use your responses. If you are happy to continue, please fill in the declaration form and click "I Agree" before starting the experiment.</p>
       dataPrivacyNotice: >
         <p align=left>The experiment will involve giving responses to questions or stimuli. In addition to the content of your responses, your interaction with the experimental application will also be logged.</p><p align=left>In addition to your responses you will be asked to provide the following information ("personal data"): age, gender, hearing health, prior listening experiment experience, spatial audio listening experience, headphone listening habits, the role of audio in your work and hobbies, and the background noise level in your listening environment.</p><p align="left">The BBC is the 'data controller' of this information. This means that the BBC decides what your personal data is used for, and the ways in which it is processed. The legal basis on which the BBC processes your personal data is on the basis of your consent. You may withdraw your consent at any time by contacting <a href="mailto:listening.experiments@rd.bbc.co.uk">listening.experiments@rd.bbc.co.uk</a> (please state the experiment title given above and the date on which you participated).</p><p align="left">The BBC will retain your personal data for 3 months from the final experiment session. At this time, the elements that enable identification of an individual will be destroyed in line with the BBC's Records Management Policy. The BBC will not share your personal data with any third parties. The anonymous responses will be maintained and handled as described below.</p><p align="left">Data protection law gives you certain rights in relation to your personal data, including the right to request from the controller access to and rectification or erasure of your personal data or restriction of its processing, and to object to processing. We protect your details in many different ways. These include staff training, investing in technology and following strict handling and storing procedures.</p><p align="left">If you have any questions about how the BBC handles your personal information, or if you wish to contact the BBC to exercise your rights in relation to your personal data, please contact <a href="mailto:DataProtectionEnquiries@bbc.co.uk">DataProtectionEnquiries@bbc.co.uk</a>. If you raise a complaint with the BBC about the way it has handled your personal data and you are dissatisfied with the BBC's response, you are entitled to raise a concern with the Information Commissioner's Office (ICO) at: <a href="https://ico.org.uk/concerns/">https://ico.org.uk/concerns/</a>.</p>
       responsesNotice: <p align="left">You are free to withdraw from the experiment at any time, without needing to justify your decision and without prejudice. You can request that your responses are removed, but this will not be possible after 3 months from the final experiment session as the data will then be anonymised.</p><p align="left">The anonymous responses you give may be used (aggregated across participants) in internal or external research publications and/or to inform the design and implementation of new audio technology.</p><p align="left">The anonymous responses may be shared with the BBC's academic partners (for example, members of the Audio Research Partnership or Data Science Research Partnership), and/or made publicly available as a dataset.</p>
@@ -33,13 +36,12 @@ pages:
         - name: consented
           text: I confirm that I have read and understood the above and freely consent to participating in this experiment. I have been given adequate time to consider my participation and agree to comply with the instructions and restrictions of the experiment.
     - type: OLE_multi
-      id: ole_multi
-      name: Overall Listening Experience - Multiple Stimuli Rating
-      content: How much do you enjoy listening to the following music items?
+      id: ole_multi_familiarization
+      name: Section 1 Familiarization Page
+      content: This is your chance to familiarize yourself with the interface for section 1. Please adjust the volume to a desired level and listen to the "Familiarization stimulus 1" on your iOS device and then rate it according to the following question:<br><br> <b>How much do you enjoy listening to the following excerpt?</b>
       mustRate: true
       stimuli:
           C1: configs/resources/audio/mono_c1.wav
-          C2: configs/resources/audio/mono_c2.wav
       response:
         - value: not at all
           label: Not at all
@@ -52,7 +54,7 @@ pages:
           imgSelected: configs/resources/images/star_on.png
           imgHigherResponseSelected: configs/resources/images/star_on.png
         - value: neutral
-          label: neutral
+          label: Neutral
           img: configs/resources/images/star_off.png
           imgSelected: configs/resources/images/star_on.png
           imgHigherResponseSelected: configs/resources/images/star_on.png
@@ -65,11 +67,661 @@ pages:
           label: A lot
           img: configs/resources/images/star_off.png
           imgSelected: configs/resources/images/star_on.png
-          imgHigherResponseSelected: configs/resources/images/star_on.png          
+          imgHigherResponseSelected: configs/resources/images/star_on.png 
 
+    - type: generic
+      id: familiarization1_done
+      name: Familiarization for Section 1 - Completed
+      content: <p> You completed the familiarization page for section 1. Click "Next" when you are ready to move onto the familiarization page for section 2.</p>
+    
+    - type: OLE_CATA
+      id: ole_cata_familiarization
+      name: Section 2 Familiarization Page
+      content: This is your chance to familiarize yourself with the interface for section 2. Please listen to the "Familiarization stimulus 2" on your iOS device and then rate it according to the following question:<br><br> <b>How much do you enjoy listening to the following excerpt?</b>
+      mustRate: true
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      response:
+        - value: not at all
+          label: Not at all
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: not a lot
+          label: Not a lot
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: neutral
+          label: Neutral
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: quite
+          label: Quite
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png   
+        - value: a lot
+          label: A lot
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png 
+      questionnaire:
+        - type: attributeheading
+          label: Attribute selection
+          content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
+        - type: checkboxes
+          label: Spatial   
+          name: spatial
+          response:
+            - value: enveloping
+              label: Enveloping
+              popUp: definition of enveloping
+            - value: sounds easily localized
+              label: Sounds easily localized
+              popUp: definition of sounds easily localized
+            - value: sounds hard to localise
+              label: Sounds hard to localise
+              popUp: definition of sounds hard to localise
+        - type: checkboxes
+          label: Timbral   
+          name: timbral
+          response:
+            - value: strong colouration
+              label: Strong colouration
+              popUp: definition of strong colouration
+            - value: subtle colouration
+              label: Subtle colouration
+              popUp: definition of subtle colouration
+            - value: no colouration
+              label: No colouration
+              popUp: definition of no colouration
+            - value: phasiness comb-filtering
+              label: Phasiness / comb-filtering
+              popUp: definition of phasiness comb-filtering
+        - type: checkboxes
+          label: Head movement   
+          name: head movement
+          response:
+            - value: obvious latency
+              label: Obvious latency
+              popUp: definition of obvious latency
+            - value: subtle latency
+              label: Subtle latency
+              popUp: definition of subtle latency
+            - value: no latency
+              label: No latency
+              popUp: definition of no latency
+            - value: localisation stable with head movement
+              label: Localisation stable with head movement
+              popUp: definition of localization stable with head movement
+            - value: localisation unstable with head movement
+              label: Localisation unstable with head movement
+              popUp: definition of localization unstable with head movement
+        - type: checkboxes
+          label: Dynamics  
+          name: dynamics 
+          response:
+            - value: louder
+              label: Louder
+              popUp: definition of louder
+            - value: quieter
+              label: Quieter
+              popUp: definition of quieter
+            - value: reduced dynamic range
+              label: Reduced dynamic range
+              popUp: definition of reduced dynamic range
+            - value: increased dynamic range
+              label: Increased dynamic range
+              popUp: definition of increased dynamic range
+        - type: checkboxes
+          label: General  
+          name: general
+          response:
+            - value: clear
+              label: Clear
+              popUp: definition of clear
+            - value: unclear
+              label: Unclear 
+              popUp: definition of unclear
+            - value: natural
+              label: Natural
+              popUp: definition of natural
+            - value: unnatural
+              label: Unnatural
+              popUp: definition of unnatural
+            - value: immersive
+              label: Immersive
+              popUp: definition of immersive
+        - type: notesheading
+          label: Extra notes
+          content: Give any further explanation for your ratings
+        - type: long_text
+          name: comment
+          optional: true 
+
+    - type: generic
+      id: familiarization2_done
+      name: Familiarization for Section 2 - Completed
+      content: <p> You completed the familiarization page for section 2. Please <b>do not adjust the volume level on your iOS device</b> from now on unless necessary. Click "Next" when you are ready to move onto the actual experiment.</p>
+
+    - type: OLE_multi
+      id: ole_multi_part1
+      name: Overall Listening Experience - Multiple Stimuli Rating 
+      content: How much do you enjoy listening to the following excerpts?
+      mustRate: true
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+          C2: configs/resources/audio/mono_c1.wav
+          C3: configs/resources/audio/mono_c1.wav
+          C4: configs/resources/audio/mono_c1.wav
+          C5: configs/resources/audio/mono_c1.wav
+      response:
+        - value: not at all
+          label: Not at all
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: not a lot
+          label: Not a lot
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: neutral
+          label: Neutral
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: quite
+          label: Quite
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png   
+        - value: a lot
+          label: A lot
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png 
+
+    - type: generic
+      id: section1_done
+      name: Section 1 - Completed
+      content: <p> You completed section 1 of part 1. Click "Next" when you are ready to move onto section 2.</p>
+
+    - type: OLE_CATA
+      id: stimulus1_part1
+      name: Stimulus 1
+      content: How much do you enjoy listening to the following excerpt?
+      mustRate: true
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      response:
+        - value: not at all
+          label: Not at all
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: not a lot
+          label: Not a lot
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: neutral
+          label: Neutral
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: quite
+          label: Quite
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png   
+        - value: a lot
+          label: A lot
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png 
+      questionnaire:
+        - type: attributeheading
+          label: Attribute selection
+          content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
+        - type: checkboxes
+          label: Spatial   
+          name: spatial
+          response:
+            - value: enveloping
+              label: Enveloping
+              popUp: definition of enveloping
+            - value: sounds easily localized
+              label: Sounds easily localized
+              popUp: definition of sounds easily localized
+            - value: sounds hard to localise
+              label: Sounds hard to localise
+              popUp: definition of sounds hard to localise
+        - type: checkboxes
+          label: Timbral   
+          name: timbral
+          response:
+            - value: strong colouration
+              label: Strong colouration
+              popUp: definition of strong colouration
+            - value: subtle colouration
+              label: Subtle colouration
+              popUp: definition of subtle colouration
+            - value: no colouration
+              label: No colouration
+              popUp: definition of no colouration
+            - value: phasiness comb-filtering
+              label: Phasiness / comb-filtering
+              popUp: definition of phasiness comb-filtering
+        - type: checkboxes
+          label: Head movement   
+          name: head movement
+          response:
+            - value: obvious latency
+              label: Obvious latency
+              popUp: definition of obvious latency
+            - value: subtle latency
+              label: Subtle latency
+              popUp: definition of subtle latency
+            - value: no latency
+              label: No latency
+              popUp: definition of no latency
+            - value: localisation stable with head movement
+              label: Localisation stable with head movement
+              popUp: definition of localization stable with head movement
+            - value: localisation unstable with head movement
+              label: Localisation unstable with head movement
+              popUp: definition of localization unstable with head movement
+        - type: checkboxes
+          label: Dynamics  
+          name: dynamics 
+          response:
+            - value: louder
+              label: Louder
+              popUp: definition of louder
+            - value: quieter
+              label: Quieter
+              popUp: definition of quieter
+            - value: reduced dynamic range
+              label: Reduced dynamic range
+              popUp: definition of reduced dynamic range
+            - value: increased dynamic range
+              label: Increased dynamic range
+              popUp: definition of increased dynamic range
+        - type: checkboxes
+          label: General  
+          name: general
+          response:
+            - value: clear
+              label: Clear
+              popUp: definition of clear
+            - value: unclear
+              label: Unclear 
+              popUp: definition of unclear
+            - value: natural
+              label: Natural
+              popUp: definition of natural
+            - value: unnatural
+              label: Unnatural
+              popUp: definition of unnatural
+            - value: immersive
+              label: Immersive
+              popUp: definition of immersive
+        - type: notesheading
+          label: Extra notes
+          content: Give any further explanation for your ratings
+        - type: long_text
+          name: comment
+          optional: true  
+
+    - type: OLE_CATA
+      id: stimulus2_part1
+      name: Stimulus 2
+      content: How much do you enjoy listening to the following excerpt?
+      mustRate: true
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      response:
+        - value: not at all
+          label: Not at all
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: not a lot
+          label: Not a lot
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: neutral
+          label: Neutral
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: quite
+          label: Quite
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png   
+        - value: a lot
+          label: A lot
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png 
+      questionnaire:
+        - type: attributeheading
+          label: Attribute selection
+          content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
+        - type: checkboxes
+          label: Spatial   
+          name: spatial
+          response:
+            - value: enveloping
+              label: Enveloping
+              popUp: definition of enveloping
+            - value: sounds easily localized
+              label: Sounds easily localized
+              popUp: definition of sounds easily localized
+            - value: sounds hard to localise
+              label: Sounds hard to localise
+              popUp: definition of sounds hard to localise
+        - type: checkboxes
+          label: Timbral   
+          name: timbral
+          response:
+            - value: strong colouration
+              label: Strong colouration
+              popUp: definition of strong colouration
+            - value: subtle colouration
+              label: Subtle colouration
+              popUp: definition of subtle colouration
+            - value: no colouration
+              label: No colouration
+              popUp: definition of no colouration
+            - value: phasiness comb-filtering
+              label: Phasiness / comb-filtering
+              popUp: definition of phasiness comb-filtering
+        - type: checkboxes
+          label: Head movement   
+          name: head movement
+          response:
+            - value: obvious latency
+              label: Obvious latency
+              popUp: definition of obvious latency
+            - value: subtle latency
+              label: Subtle latency
+              popUp: definition of subtle latency
+            - value: no latency
+              label: No latency
+              popUp: definition of no latency
+            - value: localisation stable with head movement
+              label: Localisation stable with head movement
+              popUp: definition of localization stable with head movement
+            - value: localisation unstable with head movement
+              label: Localisation unstable with head movement
+              popUp: definition of localization unstable with head movement
+        - type: checkboxes
+          label: Dynamics  
+          name: dynamics 
+          response:
+            - value: louder
+              label: Louder
+              popUp: definition of louder
+            - value: quieter
+              label: Quieter
+              popUp: definition of quieter
+            - value: reduced dynamic range
+              label: Reduced dynamic range
+              popUp: definition of reduced dynamic range
+            - value: increased dynamic range
+              label: Increased dynamic range
+              popUp: definition of increased dynamic range
+        - type: checkboxes
+          label: General  
+          name: general
+          response:
+            - value: clear
+              label: Clear
+              popUp: definition of clear
+            - value: unclear
+              label: Unclear 
+              popUp: definition of unclear
+            - value: natural
+              label: Natural
+              popUp: definition of natural
+            - value: unnatural
+              label: Unnatural
+              popUp: definition of unnatural
+            - value: immersive
+              label: Immersive
+              popUp: definition of immersive
+        - type: notesheading
+          label: Extra notes
+          content: Give any further explanation for your ratings
+        - type: long_text
+          name: comment
+          optional: true 
+
+    - type: generic
+      id: break
+      name: End of Part 1
+      content: <p>You have completed part 1 of this experiment. Now, please take a break for at least 30 minutes. <b>Do not close this browser window</b> otherwise your progress will be lost. When you are ready to continue onto part 2, simply click the "Next" button.</p>
+    
+    - type: OLE_multi
+      id: ole_multi_part2
+      name: Overall Listening Experience - Multiple Stimuli Rating
+      content: How much do you enjoy listening to the following excerpts?
+      mustRate: true
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+          C2: configs/resources/audio/mono_c2.wav
+          C3: configs/resources/audio/mono_c1.wav
+          C4: configs/resources/audio/mono_c1.wav
+          C5: configs/resources/audio/mono_c1.wav
+      response:
+        - value: not at all
+          label: Not at all
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: not a lot
+          label: Not a lot
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: neutral
+          label: Neutral
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: quite
+          label: Quite
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png   
+        - value: a lot
+          label: A lot
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png 
+
+    - type: generic
+      id: section1_done
+      name: Section 1 - Completed
+      content: <p> You completed section 1 of part 2. Click "Next" when you are ready to move onto section 2.</p>
+
+    - type: OLE_CATA
+      id: stimulus1_part2
+      name: Stimulus 1
+      content: How much do you enjoy listening to the following excerpt?
+      mustRate: true
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      response:
+        - value: not at all
+          label: Not at all
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: not a lot
+          label: Not a lot
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: neutral
+          label: Neutral
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png
+        - value: quite
+          label: Quite
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png   
+        - value: a lot
+          label: A lot
+          img: configs/resources/images/star_off.png
+          imgSelected: configs/resources/images/star_on.png
+          imgHigherResponseSelected: configs/resources/images/star_on.png 
+      questionnaire:
+        - type: attributeheading
+          label: Attribute selection
+          content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
+        - type: checkboxes
+          label: Spatial   
+          name: spatial
+          response:
+            - value: enveloping
+              label: Enveloping
+              popUp: definition of enveloping
+            - value: sounds easily localized
+              label: Sounds easily localized
+              popUp: definition of sounds easily localized
+            - value: sounds hard to localise
+              label: Sounds hard to localise
+              popUp: definition of sounds hard to localise
+        - type: checkboxes
+          label: Timbral   
+          name: timbral
+          response:
+            - value: strong colouration
+              label: Strong colouration
+              popUp: definition of strong colouration
+            - value: subtle colouration
+              label: Subtle colouration
+              popUp: definition of subtle colouration
+            - value: no colouration
+              label: No colouration
+              popUp: definition of no colouration
+            - value: phasiness comb-filtering
+              label: Phasiness / comb-filtering
+              popUp: definition of phasiness comb-filtering
+        - type: checkboxes
+          label: Head movement   
+          name: head movement
+          response:
+            - value: obvious latency
+              label: Obvious latency
+              popUp: definition of obvious latency
+            - value: subtle latency
+              label: Subtle latency
+              popUp: definition of subtle latency
+            - value: no latency
+              label: No latency
+              popUp: definition of no latency
+            - value: localisation stable with head movement
+              label: Localisation stable with head movement
+              popUp: definition of localization stable with head movement
+            - value: localisation unstable with head movement
+              label: Localisation unstable with head movement
+              popUp: definition of localization unstable with head movement
+        - type: checkboxes
+          label: Dynamics  
+          name: dynamics 
+          response:
+            - value: louder
+              label: Louder
+              popUp: definition of louder
+            - value: quieter
+              label: Quieter
+              popUp: definition of quieter
+            - value: reduced dynamic range
+              label: Reduced dynamic range
+              popUp: definition of reduced dynamic range
+            - value: increased dynamic range
+              label: Increased dynamic range
+              popUp: definition of increased dynamic range
+        - type: checkboxes
+          label: General  
+          name: general
+          response:
+            - value: clear
+              label: Clear
+              popUp: definition of clear
+            - value: unclear
+              label: Unclear 
+              popUp: definition of unclear
+            - value: natural
+              label: Natural
+              popUp: definition of natural
+            - value: unnatural
+              label: Unnatural
+              popUp: definition of unnatural
+            - value: immersive
+              label: Immersive
+              popUp: definition of immersive
+        - type: notesheading
+          label: Extra notes
+          content: Give any further explanation for your ratings
+        - type: long_text
+          name: comment
+          optional: true 
 
     - type: finish
-      name: Thank you
-      content: Thank you for attending
+      name: Questionnaire
+      content: You completed both parts of the experiment. Now please fill out the questionnaire below and click "Send Results" when done. 
+      popupcontent: Your results were successfully submitted. Goodbye and have a nice day!
       showResults: true
       writeResults: true
+      questionnaire:
+          - type: number
+            label: Age
+            name: age
+            min: 0
+            max: 100
+            default: 0
+          - type: likert
+            name: gender
+            label: Gender
+            response:
+             - value: female
+               label: Female
+             - value: male
+               label: Male
+             - value: other
+               label: Other
+          - type: likert
+            name: expert_spatial
+            label: Are you an expert listener in spatial audio? 
+            response:
+             - value: no
+               label: No
+             - value: yes
+               label: Yes
+          - type: likert
+            name: listening_test_experience
+            label: Have you taken part in a listening test about spatial attributes yet? 
+            response:
+             - value: no
+               label: No
+             - value: yes
+               label: Yes
+          - type: likert
+            name: professional
+            label: Do you have a background in professional audio (e.g. sound/recording engineer, researcher)? 
+            response:
+             - value: no
+               label: No
+             - value: yes
+               label: Yes

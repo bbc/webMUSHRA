@@ -525,7 +525,19 @@ $OLE_CATACSVdata = array();
 // array_push($lssCSVdata, array("session_test_id", "participant_email", "participant_age", "participant_gender", "trial_id", "stimuli_rating", "stimuli", "rating_time"));
 
 $input = array("session_test_id", "participant_id");
-array_push($input,  "trial_id", "stimuli_rating", "stimuli", "rating_time");
+array_push($input,  "trial_id", "stimuli_rating", "stimuli", "rating_time", "comment");
+foreach ($session->trials as $trial) {
+
+	if ($trial->type == "OLE_CATA") {
+		foreach ($trial->responses as $response) {
+			foreach ($response->attributes as $attrname => $value) { //looping through all attributes as defined in .yaml and pushing the attribute name to the array of csv file headders 
+				array_push($input, $attrname);
+			}
+			continue;
+		}
+	}
+}
+
 array_push($OLE_CATACSVdata, $input);
 
 foreach ($session->trials as $trial) {
@@ -534,7 +546,10 @@ foreach ($session->trials as $trial) {
 		foreach ($trial->responses as $response) {
 			$write_OLE_CATA = true;
 			$results = array($session->testId, $participantID);
-			array_push($results,  $trial->id, " $response->stimulusRating ", $response->stimulus, $response->time);
+			array_push($results,  $trial->id, " $response->stimulusRating ", $response->stimulus, $response->time, $response->comment);
+			foreach ($response->attributes as $attrname => $value) { //not push the value of each attribute
+				array_push($results, (int)$value);
+			}
 			array_push($OLE_CATACSVdata, $results);
 		}
 	}

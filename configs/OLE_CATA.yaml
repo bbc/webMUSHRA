@@ -136,43 +136,11 @@ pages:
           label: Extra notes
           content: Give any further explanation for your ratings
         - type: long_text
-          name: Extra notes
+          name: comment
           optional: true
-      
-    - type: OLE_CATA
-      id: second_page
-      name: Stimuli 2
-      content: How much do you enjoy listening to the following music item?
-      mustRate: true
-      stimuli:
-          C2: configs/resources/audio/mono_c2.wav
-      response:
-        - value: not at all
-          label: Not at all
-          img: configs/resources/images/star_off.png
-          imgSelected: configs/resources/images/star_on.png
-          imgHigherResponseSelected: configs/resources/images/star_on.png
-        - value: not a lot
-          label: Not a lot
-          img: configs/resources/images/star_off.png
-          imgSelected: configs/resources/images/star_on.png
-          imgHigherResponseSelected: configs/resources/images/star_on.png
-        - value: neutral
-          label: Neutral
-          img: configs/resources/images/star_off.png
-          imgSelected: configs/resources/images/star_on.png
-          imgHigherResponseSelected: configs/resources/images/star_on.png
-        - value: quite
-          label: Quite
-          img: configs/resources/images/star_off.png
-          imgSelected: configs/resources/images/star_on.png
-          imgHigherResponseSelected: configs/resources/images/star_on.png   
-        - value: a lot
-          label: A lot
-          img: configs/resources/images/star_off.png
-          imgSelected: configs/resources/images/star_on.png
-          imgHigherResponseSelected: configs/resources/images/star_on.png
-
+        - type: long_text
+          name: comment
+          optional: true
     - type: finish
       name: Thank you
       content: Thank you for attending
