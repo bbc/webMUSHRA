@@ -533,7 +533,7 @@ foreach ($session->trials as $trial) {
 			foreach ($response->attributes as $attrname => $value) { //looping through all attributes as defined in .yaml and pushing the attribute name to the array of csv file headders 
 				array_push($input, $attrname);
 			}
-			continue;
+			break;
 		}
 	}
 }
