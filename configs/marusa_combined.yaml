@@ -15,7 +15,7 @@ pages:
     - type: generic
       id: intro
       name: Introduction
-      content: <p><b>Welcome to this listening experiment! Thank you for taking part.</b></p><p align="left">We are evaluating the listening experience of the Apple AirPods Pro Spatial Audio feature. More specifically, we are investigating both the overall listening experience as well as its specific characteristics.</p><p align="left">Please read the experimental instructions on the following page and ask any questions you have to the experimenter. Please also read the notices on page 3 about personal data and privacy and how we will use your responses.</p>
+      content: <p><b>Welcome to this listening experiment! Thank you for taking part.</b></p><p align="center">We are evaluating the listening experience of the Apple AirPods Pro Spatial Audio feature. More specifically, we are investigating both the overall listening experience as well as its specific characteristics.</p><p align="center">Please read the experimental instructions on the following page and ask any questions you have to the experimenter. Please also read the notices on page 3 about personal data and privacy and how we will use your responses.</p>
     - type: generic
       id: instructions
       name: Experiment Instructions
@@ -115,7 +115,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -209,7 +209,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -298,7 +298,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -392,7 +392,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -433,7 +433,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -527,7 +527,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -568,7 +568,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -662,7 +662,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -703,7 +703,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -797,7 +797,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -838,7 +838,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -932,7 +932,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -973,7 +973,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -1067,7 +1067,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -1108,7 +1108,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -1202,7 +1202,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -1243,7 +1243,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -1337,7 +1337,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -1378,7 +1378,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -1472,7 +1472,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -1513,7 +1513,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -1607,7 +1607,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -1696,7 +1696,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -1790,7 +1790,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -1831,7 +1831,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -1925,7 +1925,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -1966,7 +1966,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -2060,7 +2060,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -2101,7 +2101,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -2195,7 +2195,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -2236,7 +2236,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -2330,7 +2330,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -2371,7 +2371,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -2465,7 +2465,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -2506,7 +2506,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -2600,7 +2600,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -2641,7 +2641,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -2735,7 +2735,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -2776,7 +2776,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -2870,7 +2870,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
@@ -2911,7 +2911,7 @@ pages:
           imgHigherResponseSelected: configs/resources/images/star_on.png 
       questionnaire:
         - type: attributeheading
-          label: Attribute selection
+          label: Attribute Selection
           content: Please select all attributes which contribute most to your listening experience rating. Hover over each attribute to see its definition.
         - type: checkboxes
           label: Spatial   
@@ -3005,7 +3005,7 @@ pages:
               label: Localisation unstable <br>with head movement
               popUp: Positioning of the sound elements is inconsistent during head movement
         - type: notesheading
-          label: Extra notes
+          label: Extra Notes
           content: Give any further explanation for your rating
         - type: long_text
           name: comment
