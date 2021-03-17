@@ -83,6 +83,9 @@ function addPagesToPageManager(_pageManager, _pages) {
       } else if (pageConfig.type == "consent_form") {
         var consentFormPage = new ConsentFormPage(_pageManager, session, pageConfig, pageTemplateRenderer);
         _pageManager.addPage(consentFormPage);
+      } else if (pageConfig.type == "mus") {
+        var musPage = new MusPage(_pageManager, audioContext, config.bufferSize, audioFileLoader, session, pageConfig, mushraValidator, errorHandler, config.language);
+        _pageManager.addPage(musPage);
       } else if (pageConfig.type == "mushra") {
         var mushraPage = new MushraPage(_pageManager, audioContext, config.bufferSize, audioFileLoader, session, pageConfig, mushraValidator, errorHandler, config.language);
         _pageManager.addPage(mushraPage);
