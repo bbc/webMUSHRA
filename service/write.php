@@ -104,6 +104,52 @@ if ($write_mushra) {
 	fclose($fp);
 }
 
+// mus
+$write_mus = false;
+$musCsvData = array();
+
+$input = array("session_test_id", "participant_id");
+array_push($input, "trial_id", "rating_stimulus", "rating_score", "rating_time", "rating_comment");
+
+$first_mus = true;
+foreach ($session->trials as $trial) {
+	if ($trial->type == "mus") {
+		$write_mus = true;
+		if ($first_mus) {
+			// TODO: this just assumes that every mus page has the same extras currently
+			foreach ($trial->responses[0]->extra_responses as $key => $value) {
+				array_push($input, "rating_" . $key);
+			}
+			array_push($musCsvData, $input);
+			$first_mus = false;
+		}
+
+		foreach ($trial->responses as $response) {
+			$results = array($session->testId, $participantID);
+			array_push($results, $trial->id, $response->stimulus, $response->score, $response->time, $response->comment);
+			// TODO: this just assumes that every mus page has the same extras currently
+			foreach ($response->extra_responses as $key => $value) {
+				array_push($results, $value);
+			}
+			array_push($musCsvData, $results);
+		}
+	}
+}
+
+if ($write_mus) {
+	$filename = $filepathPrefix . "mus" . $filepathPostfix;
+	$isFile = is_file($filename);
+	$fp = fopen($filename, 'a');
+	foreach ($musCsvData as $row) {
+		if ($isFile) {
+			$isFile = false;
+		} else {
+			fputcsv($fp, $row);
+		}
+	}
+	fclose($fp);
+}
+
 //bbcspatial
 $write_bbc_spatial = false;
 $bbc_spatialCsvData = array();
