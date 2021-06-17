@@ -120,8 +120,12 @@ td.stopButton {
   width: 5%
 }
 
+#parentWavesurfer {
+  height: 50px;
+}
+
 #waveTable {
-  width: 100%
+  width: 100%;
 }
 
 #conditionNameScale {
@@ -138,7 +142,7 @@ td.stopButton {
 }
 
 #mainUp {
-  width : 50%;
+  width : 75%;
 }
 
 .ui-tolito-progressbar-outer-a
