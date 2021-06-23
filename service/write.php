@@ -41,6 +41,9 @@ if (!is_dir($filepathPrefix)) {
 $participantCsvData = array();
 // headings from participant questionnaire and consent data
 $input = array("session_test_id", "participant_id", "time_stamp");
+if (isset($session->participant->completionCode)) {
+	array_push($input, "completion_code");
+}
 foreach ($session->participant->questionnaire as $question => $answer) {
 	array_push($input, $question);
 }
@@ -50,6 +53,9 @@ foreach ($session->participant->consent as $decl => $resp) {
 array_push($participantCsvData, $input);
 // push participant data
 $partData = array($session->testId, $participantID, $dateTimeStr);
+if (isset($session->participant->completionCode)) {
+	array_push($partData, $session->participant->completionCode);
+}
 foreach ($session->participant->questionnaire as $question => $answer) {
 	array_push($partData, $answer);
 }
